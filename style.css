@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2&display=swap');
+:root
+{
+    --color-box-height: 150px;
+
+}
 *{
     margin: 0;
     padding: 0;
@@ -25,7 +30,7 @@ body{
     
 }
 .color-box{
-    width: 200px;
+    width: 50%;
     height: 200px;
     
     border-radius: 5px;
@@ -37,6 +42,7 @@ body{
     justify-items: center;
     align-items:center;
     height: 100px;
+    width: 100%;
 }
 .red,.green,.blue{
     width: 50%;
@@ -49,7 +55,7 @@ input[type="range"]{
     appearance: none;
     outline: none;
     height: 15px;
-    width: 270px;
+    width: 100%;
     border-radius: 20px;
     overflow: hidden;
     justify-self: start;
@@ -144,4 +150,48 @@ button#resetBtn:hover
 {
     box-shadow: 0 0 3px 2px white;
     text-shadow:1px 1px 3px rgb(255, 255, 255);
+}
+
+@media screen and (max-width:800px){
+    .color-box
+    {
+        height: var(--color-box-height);
+    }
+    .red,.green,.blue
+    {
+        display: grid;
+        width: 100%;
+    }
+    input[type="text"]
+    {
+        display: block;
+        
+    }
+    .slider
+    {
+        display:grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .container
+    {
+        box-sizing: border-box;
+        padding: 0 20px;
+        width: 80%;
+    }
+    .button
+    {
+        width: 35%;
+    }
+}
+@media (max-width:385px) {
+    .color-box
+    {
+        height: 100px;
+    }
+    .button
+    {
+        font-size: .6rem;
+        width: 50%;
+    }
 }

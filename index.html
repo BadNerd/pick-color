@@ -11,17 +11,25 @@
 <body>
     <div class="container">
         <div class="color-box"></div>
-        <div class="red">
-            <input type="range" name="sliderR" min="0" max="255">
-            <input type="text" id="inputR">
+
+        <div class="slider">
+            <div class="red">
+                <input type="range" name="sliderR" min="0" max="255">
+                <input type="text" id="inputR">
+            </div>
+            <div class="green">
+                <input type="range" name="sliderG"  min="0" max="255">
+                <input type="text" id="inputG">
+            </div>
+            <div class="blue">
+                <input type="range" name="sliderB"  min="0" max="255">
+                <input type="text" id="inputB">
+            </div>
         </div>
-        <div class="green">
-            <input type="range" name="sliderG"  min="0" max="255">
-            <input type="text" id="inputG">
-        </div>
-        <div class="blue">
-            <input type="range" name="sliderB"  min="0" max="255">
-            <input type="text" id="inputB">
+
+        <div class="button">
+            <button id="resetBtn">Reset</button>
+            <button id="shuffleBtn">Random</button>
         </div>
     </div>
 </body>

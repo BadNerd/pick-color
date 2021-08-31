@@ -26,46 +26,35 @@ sliderB .value = '0';
 
 colorBox.style.backgroundColor = 'rgb(0,0,0)'
 
-                    // Functions \\
+                    // Functions \\                    
 // Slider
-sliderR.addEventListener('input',function()
-{
+function slider(colorInput,colorSLider){
     const r = sliderR.value;
     const g = sliderG.value;
     const b = sliderB.value;
 
-    inputR.value = sliderR.value;
+    colorInput.value = colorSLider.value;
 
     colorBox.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
     colorBox.style.boxShadow = '0 0 4px 3px rgba(' + r + ',' + g + ',' + b + ',.8)';
+}
+sliderR.addEventListener('input',function()
+{
+    slider(inputR,sliderR);
     
 })
 sliderG.addEventListener('input',function()
 {
-    const r = sliderR.value;
-    const g = sliderG.value;
-    const b = sliderB.value;
-
-    inputG.value = sliderG.value;
-
-    colorBox.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
-    colorBox.style.boxShadow = '0 0 4px rgba(' + r + ',' + g + ',' + b + ',.8)';
+    slider(inputG,sliderG);
 })
 sliderB.addEventListener('input',function()
 {
-    const r = sliderR.value;
-    const g = sliderG.value;
-    const b = sliderB.value;
-
-    inputB.value = sliderB.value;
-
-    colorBox.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
-    colorBox.style.boxShadow = '0 0 4px rgba(' + r + ',' + g + ',' + b + ',.8)';
+    slider(inputB,sliderB);
 })
 
 // Text Box
-inputR.addEventListener('input',function(){
-    sliderR.value = this.value;
+function textbox(slider){
+    slider.value = this.value;
     if(this.value > 255){
         this.value = 255;
     }else if(this.value < 0)
@@ -79,38 +68,15 @@ inputR.addEventListener('input',function(){
 
     colorBox.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
     colorBox.style.boxShadow = '0 0 4px rgba(' + r + ',' + g + ',' + b + ',.8)';
+}
+inputR.addEventListener('input',function(){
+    textbox(sliderR);
 })
 inputG.addEventListener('input',function(){
-    sliderG.value = this.value;
-    if(this.value > 255){
-        this.value = 255;
-    }else if(this.value < 0)
-    {
-        this.value = 0;
-    }
-
-    const r = sliderR.value;
-    const g = sliderG.value;
-    const b = sliderB.value;
-
-    colorBox.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
-    colorBox.style.boxShadow = '0 0 4px rgba(' + r + ',' + g + ',' + b + ',.8)';
+    textbox(sliderG);
 })
 inputB.addEventListener('input',function(){
-    sliderB.value = this.value;
-    if(this.value > 255){
-        this.value = 255;
-    }else if(this.value < 0)
-    {
-        this.value = 0;
-    }
-
-    const r = sliderR.value;
-    const g = sliderG.value;
-    const b = sliderB.value;
-
-    colorBox.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
-    colorBox.style.boxShadow = '0 0 4px rgba(' + r + ',' + g + ',' + b + ',.8)';
+   textbox(sliderB);
 })
 // Button
 

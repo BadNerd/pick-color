@@ -156,6 +156,7 @@ button#resetBtn:hover
     .color-box
     {
         height: var(--color-box-height);
+        width: 40%;
     }
     .red,.green,.blue
     {

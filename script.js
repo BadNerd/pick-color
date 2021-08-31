@@ -37,7 +37,7 @@ sliderR.addEventListener('input',function()
     inputR.value = sliderR.value;
 
     colorBox.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
-    colorBox.style.boxShadow = '0 0 4px rgba(' + r + ',' + g + ',' + b + ',.8)';
+    colorBox.style.boxShadow = '0 0 4px 3px rgba(' + r + ',' + g + ',' + b + ',.8)';
     
 })
 sliderG.addEventListener('input',function()
@@ -124,7 +124,12 @@ shuffleBtn.addEventListener('click',function(){
     sliderG.value = g;
     sliderB.value = b;
     
+    inputR.value = r;
+    inputG.value = g;
+    inputB.value = b;
+
     colorBox.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+
     colorBox.style.boxShadow = '0 0 4px rgba(' + r + ',' + g + ',' + b + ',.8)';
 })
 resetBtn.addEventListener('click',function(){

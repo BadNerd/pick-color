@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
-    <title>Color Pick</title>
+    <title>Random Color Generator</title>
 </head>
 <body>
     <div class="container">
@@ -15,21 +15,21 @@
         <div class="slider">
             <div class="red">
                 <input type="range" name="sliderR" min="0" max="255">
-                <input type="text" id="inputR">
+                <input type="text" id="inputR" placeholder="0">
             </div>
             <div class="green">
                 <input type="range" name="sliderG"  min="0" max="255">
-                <input type="text" id="inputG">
+                <input type="text" id="inputG" placeholder="0">
             </div>
             <div class="blue">
                 <input type="range" name="sliderB"  min="0" max="255">
-                <input type="text" id="inputB">
+                <input type="text" id="inputB" placeholder="0">
             </div>
         </div>
 
         <div class="button">
-            <button id="resetBtn">Reset</button>
             <button id="shuffleBtn">Random</button>
+            <button id="resetBtn">Reset</button>
         </div>
     </div>
 </body>

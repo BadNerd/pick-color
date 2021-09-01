@@ -53,13 +53,13 @@ sliderB.addEventListener('input',function()
 })
 
 // Text Box
-function textbox(slider){
-    slider.value = this.value;
-    if(this.value > 255){
-        this.value = 255;
-    }else if(this.value < 0)
+function textbox(slider,input){
+    slider.value = input.value;
+    if(input.value > 255){
+        input.value = 255;
+    }else if(input.value < 0)
     {
-        this.value = 0;
+       input.value = 0;
     }
 
     const r = sliderR.value;
@@ -70,13 +70,13 @@ function textbox(slider){
     colorBox.style.boxShadow = '0 0 4px rgba(' + r + ',' + g + ',' + b + ',.8)';
 }
 inputR.addEventListener('input',function(){
-    textbox(sliderR);
+    textbox(sliderR,inputR);
 })
 inputG.addEventListener('input',function(){
-    textbox(sliderG);
+    textbox(sliderG),inputG;
 })
 inputB.addEventListener('input',function(){
-   textbox(sliderB);
+   textbox(sliderB,inputB);
 })
 // Button
 

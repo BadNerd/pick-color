@@ -73,7 +73,7 @@ inputR.addEventListener('input',function(){
     textbox(sliderR,inputR);
 })
 inputG.addEventListener('input',function(){
-    textbox(sliderG),inputG;
+    textbox(sliderG,inputG);
 })
 inputB.addEventListener('input',function(){
    textbox(sliderB,inputB);
